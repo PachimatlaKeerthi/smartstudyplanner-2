@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Study Planner</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+ <h1>📚 Smart Study Planner</h1>
+  <label>Enter subjects (name,hours,deadline YYYY-MM-DD)</label>
+  <textarea id="subjects" rows="5">AI,12,2025-10-05
+Compiler Design,8,2025-09-30
+Cryptography,10,2025-10-10</textarea>
+  <label>Daily Available Hours</label>
+  <input type="number" id="dailyHours" value="4" min="1" max="12">
+  <button onclick="generatePlan()">✨ Generate Study Plan</button>
+  <button onclick="downloadCSV()">⬇ Download as CSV</button>
+  <h2>📑 Generated Plan</h2>
+  <div id="plan"></div>
+  <h2>📊 Hours Distribution</h2>
+  <canvas id="chart"></canvas>
+  <script src="script.js"></script>
+</body>
+</html>
+
